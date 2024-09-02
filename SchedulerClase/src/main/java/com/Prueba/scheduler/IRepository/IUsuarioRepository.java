@@ -1,5 +1,5 @@
 package com.Prueba.scheduler.IRepository;
 
-public interface IUsuarioRepository {
 
+public interface IUsuarioRepository {
 }

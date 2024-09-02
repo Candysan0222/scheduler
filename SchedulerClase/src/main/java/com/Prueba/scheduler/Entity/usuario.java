@@ -3,15 +3,11 @@ package com.Prueba.scheduler.Entity;
 import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 
-@Entity
-@Table(name="usuario")
-public class usuario {
+public class Usuario {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -105,12 +101,13 @@ public class usuario {
 		this.correoElectronico = correoElectronico;
 	}
 
-	public boolean getNotifi() {
+	public boolean isNotifi() {
 		return notifi;
 	}
 
 	public void setNotifi(boolean notifi) {
 		this.notifi = notifi;
 	}
+	
 	
 }
