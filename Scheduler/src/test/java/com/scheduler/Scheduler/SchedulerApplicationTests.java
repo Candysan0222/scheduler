@@ -1,4 +1,4 @@
-package com.Prueba.scheduler;
+package com.scheduler.Scheduler;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

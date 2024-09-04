@@ -1,28 +1,32 @@
-package com.Prueba.scheduler.Entity;
+package com.scheduler.Scheduler.Entity;
 
 import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
+@Entity
+@Table(name = "usuario")
 public class Usuario {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long Id;
 	
-	@Column(name = "tipo_documento", nullable = false, unique = true, length = 30)
+	@Column(name = "tipo_documento", nullable = false, unique = false, length = 30)
 	private String tipoDocumento;
 	
 	@Column(name = "num_documento", nullable = false, unique = true, length = 30)
-	private int numDocumento;
+	private String numDocumento;
 	
-	@Column(name = "fecha_nacimiento", nullable = false, unique = true, length = 30)
+	@Column(name = "fecha_nacimiento", nullable = false, unique = false, length = 30)
 	private LocalDateTime fechaNacimiento;
 	
-	@Column(name = "contraseña", nullable = false, unique = true, length = 30)
+	@Column(name = "contraseña", nullable = false, unique = false, length = 30)
 	private String contraseña;
 	
 	@Column(name = "fecha_contra", nullable = false, unique = true, length = 30)
@@ -31,10 +35,10 @@ public class Usuario {
 	@Column(name = "fecha_inicio_sesion", nullable = false, unique = true, length = 30)
 	private LocalDateTime fechaInicioSesion;
 	
-	@Column(name = "correo_electronico", nullable = false, unique = true, length = 30)
+	@Column(name = "correo_electronico", nullable = false, unique = true, length = 50)
 	private String correoElectronico;
 	
-	@Column(name = "notifi", nullable = false, unique = true)
+	@Column(name = "notifi", nullable = false)
 	private boolean notifi;
 
 	public Long getId() {
@@ -53,11 +57,11 @@ public class Usuario {
 		this.tipoDocumento = tipoDocumento;
 	}
 
-	public int getNumDocumento() {
+	public String getNumDocumento() {
 		return numDocumento;
 	}
 
-	public void setNumDocumento(int numDocumento) {
+	public void setNumDocumento(String numDocumento) {
 		this.numDocumento = numDocumento;
 	}
 
@@ -108,6 +112,6 @@ public class Usuario {
 	public void setNotifi(boolean notifi) {
 		this.notifi = notifi;
 	}
-	
+
 	
 }
