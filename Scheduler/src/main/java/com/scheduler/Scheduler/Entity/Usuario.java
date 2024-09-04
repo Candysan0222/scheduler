@@ -40,6 +40,11 @@ public class Usuario {
 	
 	@Column(name = "notifi", nullable = false)
 	private boolean notifi;
+	
+	@Column(name = "estado", nullable = false)
+	private boolean estado;
+	
+	
 
 	public Long getId() {
 		return Id;
@@ -111,6 +116,14 @@ public class Usuario {
 
 	public void setNotifi(boolean notifi) {
 		this.notifi = notifi;
+	}
+
+	public boolean isEstado() {
+		return estado;
+	}
+
+	public void setEstado(boolean estado) {
+		this.estado = estado;
 	}
 
 	

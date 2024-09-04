@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificación de Cambio de Estado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 20px 0;
+            background-color: #007bff;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Hola, {{ nombre_usuario }}!</h2>
+        <p>Hemos notado que no has iniciado sesión en tu cuenta en el último mes. Debido a esta inactividad, tu cuenta ha sido desactivada.</p>
+        <p>Si consideras que esto es un error o si deseas reactivar tu cuenta, por favor contacta con nuestro soporte técnico.</p>
+        <p>Para más información o asistencia, puedes visitar nuestro <a href="https://tu-dominio.com/soporte" class="button">Centro de Soporte</a>.</p>
+        <p>Gracias por tu atención.</p>
+        <p>Saludos,<br>El equipo de soporte</p>
+    </div>
+    <div class="footer">
+        <p>Este es un correo automático, por favor no respondas a este mensaje.</p>
+    </div>
+</body>
+</html>
